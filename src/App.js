@@ -13,8 +13,14 @@ function App() {
     setUserText(e.target.value)
   }
 
-  const redirectToSearch = () => {
-    window.location.href = `https://google.com/search?q=${userText}`;
+  const redirectToSearch = (e) => {
+    console.log(e.key)
+    if(e.key === 'Enter'){
+      if(!userText){
+        return '';
+      }
+      window.location.href = `https://google.com/search?q=${userText}`;
+    }
   }
   return (
     <div className="App">
@@ -22,19 +28,19 @@ function App() {
         <Navbar />
       </header>
         <div className="App-img-container">
-          <div className="mt-10">
+          <div className="mt-10 flex justify-center">
             <img src={logo} className="App-img" alt="logo"/>
           </div>
           <div>
             <div className="form-control flex justify-between items-center">
-              <AiOutlineSearch className="icon-size text-gray"/>
-              <input type="search" onChange={searchInput} placeholder="" className="border-none input"/>
-              <MdKeyboardVoice className="text-primary icon-size"/>
+              <AiOutlineSearch className="icon-size text-gray-light"/>
+              <input type="search" onChange={searchInput} onKeyPress={redirectToSearch} placeholder="" className="border-none input"/>
+              <MdKeyboardVoice className="text-primary icon-size cursor-pointer" title="Search by voice"/>
             </div>
           </div>
           <div className="flex justify-center">
             <button className="btn" onClick={redirectToSearch}>Google Search</button>
-            <a href="https://perfects.engineering" className="btn">I'm feeling Lucky</a>
+            <a href="https://perfects.engineering" className="btn flex items-center">I'm feeling Lucky</a>
           </div>
           <div className="flex justify-center items-center">
             <p className="custom-text-style">Google Offered In:</p>

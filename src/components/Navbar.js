@@ -8,7 +8,7 @@ const Navbar = () => {
                 <li className="font-13">Gmail</li>
                 <li className="font-13">Images</li>
                 <li className="">
-                    <CgMenuGridO className="icon-size text-dray-dark"/>
+                    <CgMenuGridO className="icon-size text-dray-dark cursor-pointer"/>
                 </li>
                 <li className="">
                     <button className="App-button">

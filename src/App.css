@@ -1,9 +1,3 @@
-html{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 body{
   font-family: Arial;
 }
@@ -18,17 +12,6 @@ body{
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-/* .App-header {
-  background-color: #fff;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
 
 .App-link {
   color: #61dafb;
@@ -53,7 +36,6 @@ body{
 
 .form-control{
   background: #fff;
-  display: flex;
   border: 1px solid #dfe1e5;
   box-shadow: none;
   border-radius: 24px;
@@ -63,42 +45,29 @@ body{
   max-width: 584px;
 }
 
+@media screen and (max-width:460px){
+  .form-control{
+    width:90%;
+  }
+}
 .border-none{
   border: none;
 }
 .border-none:focus{
   outline: none;
 }
-
-.flex{
-  display: flex;
-}
-
-.justify-center{
-  justify-content: center;
-}
-
-.justify-between{
-  justify-content: space-between;
-}
-
-.justify-end{
-  justify-content: flex-end;
-}
-
-.items-center{
-  align-items: center;
-}
 .input{
-  width: 95%;
+  width: 90%;
 }
-ul{
-  list-style: none;
-  padding: 0;
+
+.form-control:hover{
+  box-shadow: 0 2px 4px #ccc;
 }
-a{
-  text-decoration: none;
+
+.btn:hover{
+  border:1px solid rgb(189, 189, 189);
 }
+
 .App-button {
   background-color: var(--color-primary);
   padding: .5rem 1rem;
@@ -135,8 +104,8 @@ a{
   font-size: 13px;
 }
 .icon-size{
-  height: 20px;
-  width: 20px;
+  height: 40px;
+  width: 40px;
   padding: 0 .6rem;
 }
 .px-2{
@@ -145,14 +114,11 @@ a{
 .px-4{
   padding: 0 .8rem;
 }
-.text-center{
-  text-align: center;
-}
 .text-primary{
   color: var(--color-primary);
 }
 
-.text-gray{
+.text-gray-light{
   color: var(--color-gray);
 }
 
