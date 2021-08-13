@@ -14,7 +14,6 @@ function App() {
   }
 
   const redirectToSearch = (e) => {
-    console.log(e.type)
     if(e.key === 'Enter' || e.type === 'click'){
       if(!userText){
         return '';
